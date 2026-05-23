@@ -103,6 +103,7 @@ body {
   text-decoration: none;
   display: flex;
   justify-content: start;
+  align-items: center;
 }
 
 .contact-info__item:not(:last-child) {
@@ -114,6 +115,7 @@ body {
   width: 20px;
   display: flex;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .contact-info__item-icon path {
@@ -146,6 +148,7 @@ body {
   width: 30px;
   display: flex;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .intro__icon {
@@ -186,10 +189,15 @@ body {
   margin-bottom: 20px;
 }
 
+.experiences__company {
+  margin-bottom: 10px;
+}
+
 .experiences__company-header-durability {
+  display: block; /* fix: span не реагував на margin без display:block */
   color: var(--durability-text-color);
   text-align: left;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 15px;
 }
 
@@ -198,7 +206,7 @@ body {
   text-decoration-color: var(--text-decoration-color);
   text-decoration-line: underline;
   text-align: left;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .experiences__company-project {
@@ -207,6 +215,7 @@ body {
 }
 
 .experiences__company-project-role {
+  display: block; /* fix: span не реагував на margin без display:block */
   color: var(--durability-text-color);
   text-align: left;
   margin-bottom: 10px;
@@ -238,17 +247,23 @@ body {
   margin-bottom: 20px;
 }
 
+/* fix: відступ між блоками освіти */
+.additional-info__education-university {
+  margin-bottom: 15px;
+}
+
 .additional-info__education-university-durability {
+  display: block; /* fix: span без display:block ігнорував margin */
   color: var(--durability-text-color);
   text-align: left;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
   font-size: 15px;
 }
 
 .additional-info__education-university-speciality {
   color: var(--primary-text-color);
   text-align: left;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
 }
 
 .additional-info__education-university-name {
